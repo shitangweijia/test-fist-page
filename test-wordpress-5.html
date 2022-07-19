@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Auto Image Silder</title>
+    </head>
+	
+    <style>
+		
+		
+		
+		
+    			.backgrund-color-gray{									/*中间下划线部分*/
+    				width: 100%;
+    				height: 497.67px;
+    				background-color: #e9f1f5;
+    				position: absolute; /*父级绝对定位absolute*/
+    				display: inline-block;/*指定对象为行内块元素:即在同一行显示，又可以设置宽高，margin和padding可以设置。注意：识别代码之间的空白。意思就是说，在一行排列的时候盒子与盒子之间会出现空白空隙。*/
+    			}
+    			.diyihang{
+    				width: 1120px;
+    				height: 25px;
+    				background-color: ;
+    				position: relative;/*子级相对定位relative*/  
+    				left: 15%;
+    			}
+    			.eco-feed{
+    				text-decoration: none;
+    				    font-weight: 700;
+    				    font-size: 21px;
+    				    line-height: 120%;
+    				    color: #000;
+    			}
+    			.view-all{
+    				text-decoration: none;
+    				margin-left: 959px;
+    				font-weight: 400;
+    				    font-size: 15px;
+    				    line-height: 150%;
+    				    color: #0033a0;
+    			}
+    			.dierhang{
+    				width: 1120px;
+    				height: 362.67px;
+    				background-color: #e9f1f5;
+    				position: relative;
+    				left: 15%;
+    				margin-top: 30px;
+    				display: flex;
+    			}
+    			.image-magnify{
+    				width: 257.59px;
+    				height: 141.47px;
+    				position: relative;
+    				cursor: pointer;          /*光标经过变成指针类型*/
+    					width: 100%;
+    				    border-radius: 8px;
+    				    border-top-left-radius: 8px;
+    				    border-top-right-radius: 8px;
+    				    border-bottom-right-radius: 8px;
+    				    border-bottom-left-radius: 8px;
+    														transition-property: all;
+    														transition-duration: 0.8s;
+    														transition-timing-function: ease;
+    														transition-delay: 0s;
+    														
+    			}
+    			.image-magnify:hover{
+    				border-radius: 8px;
+    				border-top-left-radius: 8px;
+    				border-top-right-radius: 8px;
+    				border-bottom-right-radius: 8px;
+    				border-bottom-left-radius: 8px;
+    								transition: all .8s;
+    								transition-property: all;
+    								transition-duration: 0.8s;
+    								transition-timing-function: ease;
+    								transition-delay: 0s;
+    								transition: .5s transform;
+    								    transform: scale(1.02);
+    			}
+    			.text-clp{
+    				font-weight: 700;
+    				font-size: 14px;
+    				line-height: 120%;/*行高是百分之一百二十*/
+    				text-transform: uppercase; /*字母全部大写 text-transform*/
+    				color: #004bb8;
+    				margin: 20px 0 15px;
+    			}
+    			.copy-new{									/*中间的背景小黄线初始高度是26px*/
+    				width: 0px;
+    				height: 26px;
+    				background-color: #ffff00;
+    				position: relative;
+    				z-index: 1000000;
+    				transition-property: width,z-index;
+    				transition-duration: 0.3s;
+    				top: 26px;              /*将横线（背景）往下移动26px*/         /*----------------*/
+    			}
+    			.copy-new:hover{
+    				width: 257.59px;
+    			}
+    			.new{										/*背景框架，初始高度是26px*/
+    				width: 257.59px;
+    				height: 26px;
+    				background-color: #;
+    				position: relative;
+    				z-index: 10000;
+    			}
+    			.new1{
+    				background-color: #e9f1f5;				/*上方小横条  初始高度是17px*/
+    				z-index: 1000;
+    				width: 257.59px;
+    				height: 17px;
+    				position: absolute;
+    			}
+    			.new2{
+    				z-index: 1000;
+    				position: absolute;
+    				height: 4px;
+    				width: 257.59px;
+    				top: -25px;     /*将文字向上移动*/          /*---------------------------------*/
+    			}
+    			.new3{                			/*下方小横条		初始高度是5px*/
+    				height: 5px;
+    				width: 257.59px;
+    				background-color: #e9f1f5;
+    				position: absolute;
+    				top: 21px;
+    			}
+    			.new-a{
+    				font-weight: 700;
+    				font-size: 17px;
+    				color: #0033a0;
+    				text-decoration: none;
+    			}
+    			.last-text{
+    				font-weight: 400;
+    				font-size: 1pc;
+    				line-height: 135%;
+    				color: #1f1f1f;
+    				margin-top: 35px;                      /*控制单行文字与上行文字的距离*/
+    				position: absolute;
+    				position: relative ;
+    			}												/*中间下划线部分*/
+				
+				body {
+					margin-left: 0px;
+					margin-top: 0px;
+					margin-right: 0px;
+					margin-bottom: 0px;
+					height: 2000px;
+					}
+    		</style>
+    	</head>
+    	<body>
+			<div style="height:35px;background-color:#004bb8;position: sticky; top: 0; left: 0;width: 100%;display:block;z-index: 100000000;">   					<!--最顶部的菜单横栏-->
+				<div style="position:relative;left: 51.35%;background-color:#004bb8;height:35px;">
+					<div style="position:relative;top:5px;">
+						<a style="font-weight: bold; font-size: 14px; color: #FFFFFF; text-decoration: none;" href="https://cipherch.com/">
+							About CPL
+						</a>
+						<a style="font-weight: bold; font-size: 14px;margin-left: 30px; color: #FFFFFF; text-decoration: none;" href="https://cipherch.com/">
+							Careers
+						</a>
+						<a style="font-weight: bold; font-size: 14px;margin-left: 30px; color: #FFFFFF; text-decoration: none;" href="https://cipherch.com/">
+							Media Resources
+						</a>
+						<a style="font-weight: bold; font-size: 14px; margin-left: 30px;color: #FFFFFF; text-decoration: none;" href="https://cipherch.com/">
+							Contact Us
+						</a>
+					</div>
+					
+				</div>
+				<div style="height: 75px; background-color:#fafafa;width:100%;">
+					<div style="left: 15%;position:relative;top:25.025px;">
+						<img style="width:244.px;height:24.95px;" src="https://cipherch.com/wp-content/uploads/2022/05/clp-logo.webp"/>
+					</div>
+					<div style="left: 15%;position:relative;left: 29.35%;>
+						<ul style="visibility: visible;">
+							<li style="list-style-type: none; display: inline;">
+								<a href="https://cipherch.com/" style="text-decoration: none;color: #0033a0; font-weight: 700px;font-size: 14px;">
+									Residential    
+								</a>
+								<a href="https://cipherch.com/" style="text-decoration: none;color: #0033a0; font-weight: 700px;font-size: 14px;">
+									Business    
+								</a>
+								<a href="https://cipherch.com/" style="text-decoration: none;color: #0033a0; font-weight: 700px;font-size: 14px;">
+									Community    
+								</a>
+								<a href="https://cipherch.com/" style="text-decoration: none;color: #0033a0; font-weight: 700px;font-size: 14px;">
+									Environment    
+								</a>
+								<a href="https://cipherch.com/" style="text-decoration: none;color: #0033a0; font-weight: 700px;font-size: 14px;">
+									Education and development    
+								</a>
+								<a href="https://cipherch.com/" style="text-decoration: none;color: #0033a0; font-weight: 700px;font-size: 14px;">
+									Help and support
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div style="position:relative;background-color:#e9f1f5;width: 38px;height: 38px;left: 67.35%;top:-27px;">
+						<svg style="width: 28px;height:28px;position:relative;left:5px;top:5px;" t="1657881410167" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="18153" width="200" height="200"><path d="M937.798221 769.855766 714.895525 546.869159c23.821545-45.681412 37.589107-97.495498 37.589107-152.564721 0-182.559872-148.560524-331.078441-331.079464-331.078441-182.623317 0-331.098907 148.517545-331.098907 331.078441 0 182.559872 148.47559 331.078441 331.098907 331.078441 60.575634 0 117.27089-16.647145 166.206416-45.221948L807.552831 900.100132c17.938558 17.939581 41.551348 26.867928 65.12423 26.867928s47.182602-8.928347 65.123206-26.867928c17.396205-17.396205 27.033703-40.550555 27.033703-65.164139C964.831924 810.321386 955.194426 787.16806 937.798221 769.855766M133.027248 394.304438c0-158.989037 129.34795-288.358477 288.378943-288.358477 158.948105 0 288.3595 129.36944 288.3595 288.358477 0 99.206466-50.437739 186.899714-126.950344 238.795665-1.044796 0.416486-1.876744 1.252527-2.877537 1.835811-45.515636 30.03813-99.999528 47.727001-158.530596 47.727001C262.375198 682.662915 133.027248 553.336454 133.027248 394.304438M907.594315 869.896226c-19.273972 19.191084-50.562583 19.191084-69.836555 0L623.6995 655.797034c26.157753-20.274766 49.186236-44.305065 68.292386-71.421656l215.601406 215.683271c9.344832 9.262968 14.518668 21.694091 14.518668 34.877345S916.939147 860.551394 907.594315 869.896226" p-id="18154" fill="#0033a0"></path><path d="M215.169059 387.79007c0 0 42.156122-211.011878 234.186693-224.946238C449.355753 162.843832 185.944458 131.555222 215.169059 387.79007" p-id="18155" fill="#0033a0"></path></svg>
+					</div>
+					<div style="position:relative;background-color:#efdf00;width: 1px;height: 37.5px;left: 70.05%;top:-64px;">
+					</div>
+					<div style="position:relative;background-color:#0033a0;width: 96px;height: 43px;left: 70.75%;top:-104px;
+																										border-top-left-radius: 8px;
+																										border-top-right-radius: 8px;
+																										border-bottom-right-radius: 8px;
+																										border-bottom-left-radius: 8px;
+																										cursor: pointer;">
+						<svg style="width: 26px;height:20px;position:relative;left:5px;top:10px;" t="1658138861464" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2635" width="200" height="200"><path d="M508.8 141.21c119.85 0 217.36 97.51 217.36 217.36S628.65 575.93 508.8 575.93s-217.36-97.51-217.36-217.36 97.51-217.36 217.36-217.36m0-76.71c-162.41 0-294.07 131.66-294.07 294.07S346.39 652.64 508.8 652.64s294.07-131.66 294.07-294.07S671.21 64.5 508.8 64.5z" p-id="2636" fill="#ffffff"></path><path d="M106.1 959.5c-2.21 0-4.46-0.19-6.71-0.59-20.86-3.68-34.79-23.58-31.11-44.44 38.81-219.89 255.93-338.54 440.52-338.54 21.18 0 38.36 17.17 38.36 38.36s-17.17 38.36-38.36 38.36c-122.34 0-329.6 74.7-364.97 275.17-3.28 18.59-19.47 31.68-37.73 31.68z" p-id="2637" fill="#ffffff"></path><path d="M917.9 959.5c-18.27 0-34.45-13.09-37.73-31.7-35.38-200.46-242.64-275.16-364.97-275.16-21.18 0-38.36-17.17-38.36-38.36s17.17-38.36 38.36-38.36c184.59 0 401.72 118.65 440.52 338.54 3.68 20.86-10.25 40.76-31.11 44.44-2.25 0.41-4.5 0.6-6.71 0.6z" p-id="2638" fill="#ffffff"></path></svg>	
+
+						<span style="font-size: 18px;font-weight: 700;color: #fff;position:relative;top:7px;left:4px;">
+							Log in
+						</span>
+					</div>
+				</div>
+			</div>																															<!--最顶部的菜单横栏-->
+    		<div class="backgrund-color-gray" style="display:block;margin-top:40px;padding-top:40px;"> <!--底部的灰色背景-->
+    			<div class="diyihang"><!--第一行文字，中间有俩文字1120 25px-->
+    				<span href="" class="eco-feed">Eco Feed</span>
+    				<span href="" class="view-all">View All</span>
+    			</div>
+    			<div class="dierhang"><!--第二行1120	 362.67px 中间有四个部分 四个部分的间隙是96.57px 四个部分的长宽是257.59 362.67px-->
+    				<div style="width: 257.59px;height:362.67px;">
+    					<div class="image-magnify"><!--图片做鼠标经过放大缩小动画 magnify-->
+    						<img class="image-magnify" src="https://cipherch.com/wp-content/uploads/2022/07/HomeApplianceAssessment_en.thumb_.1000.1000.png"/>
+    					</div>
+    					<div class="text-clp"> <!--第二行内的第一行文字 line-height：120%；-->
+    						<span>clp services</span>
+    					</div>
+    					<div class="copy-new">                        <!--文字下滑线块    =-------			 -->
+    						<div class="new">
+    							<div class="new1">
+    							</div>
+    							<div class="new2">
+    								<span href="" class="new-a">The new Home Appliance Advisory Tool </span>
+    							</div>
+    							<div class="new3"> 
+    							</div>
+    						</div>      
+    					</div> 										<!--文字下滑线块     	=-------					-->
+    					<div class="last-text">
+    						
+    Your personalized advisor for<br> choosing the right appliances to<br> save energy and money. Try now!
+    		
+    					</div>                                   
+    				</div>											<!--第一个部分到此结束一个循环    11111111-->
+    				<div style="width: 257.59px;height:362.67px;margin-left: 29.88px;		">
+    					<div class="image-magnify" ><!--图片做鼠标经过放大缩小动画 magnify-->
+    						<img class="image-magnify" src="https://cipherch.com/wp-content/uploads/2022/07/master_the_organising_skills.thumb_.1000.1000.png"/>
+    					</div>
+    					<div class="text-clp"> <!--第二行内的第一行文字 line-height：120%；-->
+    						<span>Energy Saving Tips</span>
+    					</div>
+    					<div class="copy-new"  style="height: 48px;">                        <!--文字下滑线块    =-------			 -->
+    						<div class="new" >
+    							<div class="new1" style="height: 39.5px;">
+    							</div>
+    							<div class="new2" >
+    								<span href="" class="new-a">Master the organising skills and turn the compact homes to boutique homes </span>
+    							</div>
+    							<div class="new3" style="top:44px;">
+    							</div>
+    						</div>      
+    					</div> 										<!--文字下滑线块     	=-------					-->
+    					<div class="last-text" style="margin-top: 35px;">
+    						
+    
+          With the limited living spaces, it is very crucial to master the organising skills to turn the small space around!
+        
+    		
+    					</div>                                   
+    				</div>											<!--第一个部分到此结束一个循环             222222-->
+    				<div style="width: 257.59px;height:362.67px;margin-left: 29.88px;		">
+    					<div class="image-magnify" ><!--图片做鼠标经过放大缩小动画 magnify-->
+    						<img class="image-magnify" src="https://cipherch.com/wp-content/uploads/2022/07/Stir_fry_the_authentic_Asian_way_with_an_Induction_Cooker.thumb_.1000.1000.png"/>
+    					</div>
+    					<div class="text-clp"> <!--第二行内的第一行文字 line-height：120%；-->
+    						<span>Energy Saving Tips</span>
+    					</div>
+    					<div class="copy-new" style="top: 10px;">   <!--设置黄色的背景色往上移动-->                     <!--文字下滑线块    =-------			 -->
+    						<div class="new">
+    							<div class="new1" style="top: -13px;">
+    							</div>
+    							<div class="new2" style="top: -10px;"> <!--因为在设置黄色的背景往上移动的时候文字也跟着移动了，所以这里要将文字像下移动-->
+    								<span href="" class="new-a">Decode the energy label </span>
+    							</div>
+    							<div class="new3" style="top: 9px; height:20px;">
+    							</div>
+    						</div>      
+    					</div> 										<!--文字下滑线块     	=-------					-->
+    					<div class="last-text">
+    						
+    
+          While many electrical appliances claim to be energy saving, how energy efficient are they? 
+        
+    		
+    					</div>                                   
+    				</div>											<!--第一个部分到此结束一个循环                    333333-->
+    				<div style="width: 257.59px;height:362.67px;margin-left: 29.88px;		">
+    					<div class="image-magnify" ><!--图片做鼠标经过放大缩小动画 magnify-->
+    						<img class="image-magnify" src="https://cipherch.com/wp-content/uploads/2022/07/Decode_the_energy_label_to_find_the_most_energy_saving_electrical_appliances.thumb_.1000.1000.png"/>
+    					</div>
+    					<div class="text-clp"> <!--第二行内的第一行文字 line-height：120%；-->
+    						<span>Energy Saving Tips</span>
+    					</div>
+    					<div class="copy-new">                        <!--文字下滑线块    =-------			 -->
+    						<div class="new">
+    							<div class="new1" >
+    							</div>
+    							<div class="new2">
+    								<span href="" class="new-a">Stir-fry the authentic Asian way with an Induction Cooker</span>
+    							</div>
+    							<div class="new3">
+    							</div>
+    						</div>      
+    					</div> 										<!--文字下滑线块     	=-------					-->
+    					<div class="last-text">
+    						
+    Your personalized advisor for<br> choosing the right appliances to<br> save energy and money. Try now!
+    		
+    					</div>                                   
+    				</div>											<!--第一个部分到此结束一个循环                     444444444-->
+    			</div>
+    		</div>
+		
+    </body>
+
+</html>
