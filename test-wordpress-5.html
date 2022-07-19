@@ -22,6 +22,7 @@
     				background-color: ;
     				position: relative;/*子级相对定位relative*/  
     				left: 15%;
+					top: 10px;
     			}
     			.eco-feed{
     				text-decoration: none;
@@ -89,12 +90,13 @@
     			.copy-new{									/*中间的背景小黄线初始高度是26px*/
     				width: 0px;
     				height: 26px;
-    				background-color: #ffff00;
+					background-color: #efdf00;
     				position: relative;
     				z-index: 1000000;
     				transition-property: width,z-index;
     				transition-duration: 0.3s;
     				top: 26px;              /*将横线（背景）往下移动26px*/         /*----------------*/
+					cursor: pointer;
     			}
     			.copy-new:hover{
     				width: 257.59px;
@@ -141,20 +143,104 @@
     				margin-top: 35px;                      /*控制单行文字与上行文字的距离*/
     				position: absolute;
     				position: relative ;
-    			}												/*中间下划线部分*/
+    			}												/*中间下划线部分*/															/*上面是下划线的style*/	/*上面是下划线的style*/
 				
 				body {
 					margin-left: 0px;
 					margin-top: 0px;
 					margin-right: 0px;
 					margin-bottom: 0px;
-					height: 2000px;
-					}
+					height: 4000px;
+					display: block !important;                           /*块元素加上！important覆盖样式*/
+					}	
+				.img:hover{
+					        transition: all .8s;
+					        transition-property: all;
+					        transition-duration: 0.8s;
+					        transition-timing-function: ease;
+					        transition-delay: 0s;
+							transition: .5s transform;
+							    transform: scale(1.07);	
+				}
+				
+				
+				
+				.margin-1{
+					position: relative;
+					width: 526.66px;
+					height: 214.88px;
+					padding-left: 6px;
+					display: inline-block;
+					
+				}
+				.margin-1:hover::before{
+					content: "";
+					width: 528.66px;
+					height: 214.88px;
+					padding-left: 6px;
+					border: 1px solid rgb(0, 0, 0);
+					display: block;  /*伪元素属于行内元素，要转换为块元素*/
+					position: absolute;
+					box-sizing: border-box;/*盒子模型*/
+					cursor: pointer; /*光标移动指针变化成手指*/
+					border-radius: 15px;/*border-radius 边框样式*/
+					
+					
+				}
+				.margin{
+					position: relative; /*relative相对定位*/
+					width: 526.66px;
+					height: 214.88px;
+					padding-left: 6px;
+					padding-top: 2px;
+					overflow: hidden;
+				}
+				.margin:hover::before{
+					content: "";
+					width: 522.66px;
+					height: 214.88px;
+					padding-left: 6px;
+					display: block;  /*伪元素属于行内元素，要转换为块元素*/
+					position: absolute;/*将父元素设置为绝对定位，免得边框乱跑*/
+					box-sizing: border-box;/*盒子模型*/
+					cursor: pointer; /*光标移动指针变化成手指*/
+				}
+				.h3{
+					margin-top: 3px;
+					color: black;
+				}
+				.loop1{
+					margin-top: 4px;
+					border-radius: 15px;
+					background-color: ;
+					overflow: hidden;
+					width: 512.66px;
+					
+					window.location.href
+				}
+				.img{
+					display: block;
+					position: relative;
+					width: 522.66px;
+					height: 214.88px;
+					overflow: hidden;
+				}
+				.margin-big{
+					text-align:--; /*暂未设置居中显示text-align:center;*/
+					margin-top:10px;
+					margin-left: 8.3%;
+					position: absolute;
+					display: block;
+					top: 1050px;
+				}
+				.a{
+					text-decoration: brown;
+				}
     		</style>
     	</head>
     	<body>
 			<div style="height:35px;background-color:#004bb8;position: sticky; top: 0; left: 0;width: 100%;display:block;z-index: 100000000;">   					<!--最顶部的菜单横栏-->
-				<div style="position:relative;left: 51.35%;background-color:#004bb8;height:35px;">
+				<div style="position:relative;left: 51.35%;background-color:#004bb8;height:35px;width: 800px;">
 					<div style="position:relative;top:5px;">
 						<a style="font-weight: bold; font-size: 14px; color: #FFFFFF; text-decoration: none;" href="https://cipherch.com/">
 							About CPL
@@ -171,7 +257,7 @@
 					</div>
 					
 				</div>
-				<div style="height: 75px; background-color:#fafafa;width:100%;">
+				<div style="height: 75px; background-color:#fafafa;width:100%;overflow: hidden;">
 					<div style="left: 15%;position:relative;top:25.025px;">
 						<img style="width:244.px;height:24.95px;" src="https://cipherch.com/wp-content/uploads/2022/05/clp-logo.webp"/>
 					</div>
@@ -199,7 +285,11 @@
 							</li>
 						</ul>
 					</div>
-					<div style="position:relative;background-color:#e9f1f5;width: 38px;height: 38px;left: 67.35%;top:-27px;">
+					<div style="position:relative;background-color:#e9f1f5;width: 38px;height: 38px;left: 67.35%;top:-27px;border-top-left-radius: 8px;
+																																						border-top-right-radius: 8px;
+																																						border-bottom-right-radius: 8px;
+																																						border-bottom-left-radius: 8px;
+																																						cursor: pointer;">
 						<svg style="width: 28px;height:28px;position:relative;left:5px;top:5px;" t="1657881410167" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="18153" width="200" height="200"><path d="M937.798221 769.855766 714.895525 546.869159c23.821545-45.681412 37.589107-97.495498 37.589107-152.564721 0-182.559872-148.560524-331.078441-331.079464-331.078441-182.623317 0-331.098907 148.517545-331.098907 331.078441 0 182.559872 148.47559 331.078441 331.098907 331.078441 60.575634 0 117.27089-16.647145 166.206416-45.221948L807.552831 900.100132c17.938558 17.939581 41.551348 26.867928 65.12423 26.867928s47.182602-8.928347 65.123206-26.867928c17.396205-17.396205 27.033703-40.550555 27.033703-65.164139C964.831924 810.321386 955.194426 787.16806 937.798221 769.855766M133.027248 394.304438c0-158.989037 129.34795-288.358477 288.378943-288.358477 158.948105 0 288.3595 129.36944 288.3595 288.358477 0 99.206466-50.437739 186.899714-126.950344 238.795665-1.044796 0.416486-1.876744 1.252527-2.877537 1.835811-45.515636 30.03813-99.999528 47.727001-158.530596 47.727001C262.375198 682.662915 133.027248 553.336454 133.027248 394.304438M907.594315 869.896226c-19.273972 19.191084-50.562583 19.191084-69.836555 0L623.6995 655.797034c26.157753-20.274766 49.186236-44.305065 68.292386-71.421656l215.601406 215.683271c9.344832 9.262968 14.518668 21.694091 14.518668 34.877345S916.939147 860.551394 907.594315 869.896226" p-id="18154" fill="#0033a0"></path><path d="M215.169059 387.79007c0 0 42.156122-211.011878 234.186693-224.946238C449.355753 162.843832 185.944458 131.555222 215.169059 387.79007" p-id="18155" fill="#0033a0"></path></svg>
 					</div>
 					<div style="position:relative;background-color:#efdf00;width: 1px;height: 37.5px;left: 70.05%;top:-64px;">
@@ -217,8 +307,160 @@
 						</span>
 					</div>
 				</div>
-			</div>																															<!--最顶部的菜单横栏-->
-    		<div class="backgrund-color-gray" style="display:block;margin-top:40px;padding-top:40px;"> <!--底部的灰色背景-->
+			</div>																																			<!--最顶部的菜单横栏-->
+																																							<!--video部分-->
+			<div style="max-height: 500px; 																												
+							width: 100%; 
+							top: 75px;
+							overflow: hidden;
+							display: flex; 
+							justify-content: center;    
+							-webkit-box-align: center;
+							align-items: center;
+							margin-left: calc(50% - 50vwvw);
+							position: relative;
+							-webkit-box-align: center;">    <!--justify-content内容对齐用在弹性容器上，沿着主轴线（main axis）对齐 -->
+															<!--  -webkit-box-align基于display中内容居中垂直对齐-->
+															<!--align-items属性定义项目在交叉轴上如何对齐。-->
+					<video autoplay="autoplay"; loop="loop" src="https://cipherch.com/wp-content/uploads/2022/05/1920x1149.mp4" ;height="1149";width="100%"; style="margin-top: 0px;"></video>
+					<div style="position: absolute; left: 0; top: 20%;">
+						<img src="https://cipherch.com/wp-content/uploads/2022/05/background-arrow.png" style=" width: 10vm;height: auto;max-width: 150px; display: flex;justify-content: center;-webkit-box-align: center;align-items: center;" />
+					</div><div style="position: absolute;
+								left: 10pc;
+								top: 53px;
+								font-family: Roboto;
+								font-style: normal;
+								font-weight: 700;
+								font-size: 52px;
+								line-height: 60px;
+								color: #fff;
+								text-shadow: 0 4px 10px #665E57,0 0px 15px #55aa7f,0 0px 40px #ff0000,0 0px 5px #550000;
+								width: 383px;
+								word-wrap: normal;">Energy for Brighter Tomorrows
+					</div>
+			</div>																													<!--video部分-->
+			<div style="position: relative;top:70px;">																<!--Featured部分-->												
+				<div class="css1" style="
+											position: fixe;
+											height: 91.5px;
+											width: 100%;
+											overflow: hidden;
+											">
+						<div class="css2" style="
+													font-size: 18px;
+													line-height: 3;
+													color: #000000;
+													word-break: break-word;
+													white-space: normal; /*在写文本或者多个元素并列一行的时候，我们希望文本不会因为父框的大小而换行，也不希望同行元素因为浏览器大小原因而被挤到第二行。这个时候我们就可以使用到white-space属性样式。*/
+													position: fixe;
+													justify-content: center;
+													align-items: center;
+													margin-left: 15%;	
+													background-color: white;">
+							<h3 style="height: 91.5px;padding-top: 20px;">Featured</h3>
+						</div>
+				</div>
+				<div class="css3" style="	
+											display: block;
+											margin-left: 15%;
+											position:absolute;">
+					<div class="css4" style="
+											height: 307.95px;
+											width: 560px;
+											overflow: hidden;
+												">
+						<a class="css5" style="
+											cursor: pointer;
+											border-top-left-radius: 8px;
+											border-top-right-radius: 8px;
+											border-bottom-right-radius: 8px;
+											border-bottom-left-radius: 8px;
+											border-radius: 15px;
+											overflow: hidden;
+											background-color: black;
+											transform: rotate(0deg);
+											display: block;">
+							<img class="img" src="https://cipherch.com/wp-content/uploads/2022/06/FIT-adjustment.webp" style="
+											transition-property: all;
+											transition-duration: 0.8s;
+											transition-timing-function: ease;
+											transition-delay: 0s;
+											border-radius: 15px;
+											overflow: hidden;
+											width: 100%;
+											height: auto;
+											border-radius: 8px;
+											vertical-align: bottom;">
+						</a>
+					</div>
+					<div style="position: absolute;top:0px;left:600px;">
+						<div class="copy-new" style="top: 10px;">   <!--设置黄色的背景色往上移动-->                     <!--文字下滑线块    =-------			 -->
+							<div class="new">
+								<div class="new1" style="top: -2px !important;background-color:#ffffff;">
+								</div>
+								<div class="new2" style="top: -2px !important;"> <!--因为在设置黄色的背景往上移动的时候文字也跟着移动了，所以这里要将文字像下移动-->
+									<span href="" class="new-a" style="font-size: 26px;">Incident Update</span>
+								</div>
+								<div class="new3" style="top: 1px !important; height:20px;background-color:#ffffff;">
+								</div>
+							</div>      
+						</div> 										<!--文字下滑线块     	=-------					-->
+						<div style="width: 500px;position:absolute;top:70px;">
+								Last updated on : 6 July 2022
+						</div>
+					</div>
+				</div>
+			</div>																												<!--Featured部分-->
+			<div class="margin-big">     <!-- 第一张图片      -->															 											<!-- 图片部分      -->
+				<a href="https://cipherch.com/" class="loop1 loop1-1 a ">
+					<div class="margin-1">
+						<div class="margin">
+							<div class="loop1">
+								<img src="https://secure.img1-fg.wfcdn.com/im/65475613/resize-h175-w517%5Ecompr-r85/1934/193410800/bottomBarTile3Bg.jpg"/>
+							</div>
+							<div class="loop1-1">
+								<h3 class="h3">
+									Choose from tons of colors and prints.
+								</h3>
+							</div>
+						</div>
+				</a>
+				
+				</div>
+				<div class="margin-1">      <!-- 第二张图片      -->
+					<a href="https://cipherch.com/" class="loop1 loop1-1 a ">
+						<div class="margin">
+							<div class="loop1" οnclick="window.open(*http://www.baidu.com*,*_self*)">
+								
+									<img src="https://secure.img1-fg.wfcdn.com/im/65475613/resize-h175-w517%5Ecompr-r85/1934/193410800/bottomBarTile3Bg.jpg"/>
+								
+							</div>
+							<div class="loop1-1">
+								<h3 class="h3">
+									Choose from tons of colors and prints.
+								</h3>
+							</div>
+						</div>
+					</a>
+					
+				</div>
+				<div class="margin-1">     <!-- 最后一张图片      -->
+					<a href="https://cipherch.com/" class="loop1 loop1-1 a ">
+						<div class="margin">
+							<div class="loop1">
+								<img src="https://secure.img1-fg.wfcdn.com/im/65475613/resize-h175-w517%5Ecompr-r85/1934/193410800/bottomBarTile3Bg.jpg"/>
+							</div>
+							<div class="loop1-1">
+								<h3 class="h3">
+									Choose from tons of colors and prints.
+								</h3>
+							</div>
+						</div>
+					</a>
+					
+				</div>
+			</div>																																										<!-- 图片部分      -->
+    		<div class="backgrund-color-gray" style="display:block;position:absolute;top:1460px;">														 <!--底部的灰色背景-->
     			<div class="diyihang"><!--第一行文字，中间有俩文字1120 25px-->
     				<span href="" class="eco-feed">Eco Feed</span>
     				<span href="" class="view-all">View All</span>
@@ -325,7 +567,7 @@
     					</div>                                   
     				</div>											<!--第一个部分到此结束一个循环                     444444444-->
     			</div>
-    		</div>
+    		</div>																																		 <!--底部的灰色背景-->
 		
     </body>
 
