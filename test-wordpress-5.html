@@ -9,6 +9,31 @@
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		*{
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+			list-style: none;
+		}
+		.Populating_the_browser{
+			position: relative;
+			margin: auto;
+		}
+		
+		
+		
+		
     			.backgrund-color-gray{									/*中间下划线部分*/
     				width: 100%;
     				height: 497.67px;
@@ -21,7 +46,7 @@
     				height: 25px;
     				background-color: ;
     				position: relative;/*子级相对定位relative*/  
-    				left: 15%;
+    				left: 16%;
 					top: 10px;
     			}
     			.eco-feed{
@@ -44,7 +69,7 @@
     				height: 362.67px;
     				background-color: #e9f1f5;
     				position: relative;
-    				left: 15%;
+    				left: 16%;
     				margin-top: 30px;
     				display: flex;
     			}
@@ -78,6 +103,7 @@
     								transition-delay: 0s;
     								transition: .5s transform;
     								    transform: scale(1.02);
+										s
     			}
     			.text-clp{
     				font-weight: 700;
@@ -235,13 +261,170 @@
 				}
 				.a{
 					text-decoration: brown;
+				}																		/* -------------------------------- */
+				.box2{
+					width: 253.33px;
+					height: 293.33px;
+					background-color: #fff;
+					border: none;
+					text-align: center;
+					position: relative;
+					display: inline-block;
+				}
+				.box2:hover::before{
+					content: "";
+					width: 253.33px;
+					height: 293.33px;
+					/*   padding-left: 6px;*/
+					border: 1px solid rgb(118, 118, 118);
+					display: block;  /*伪元素属于行内元素，要转换为块元素*/
+					position: absolute;/*position:absolute 绝对定位可以用left、right、top、bottom属性相对于其最接近的一个具有定位属性的父包含块进行绝对定位。如果不存在这样的包含块，则相对于body元素，即相对于浏览器窗口。*/
+					box-sizing: border-box;/*盒子模型*/
+					cursor: pointer; /*光标移动指针变化成手指*/
+					border-radius: 15px;/*border-radius 边框样式*/
+					box-shadow:0.5px 0.5px 5px 0.01px #c8c8c8 ;/*left值 、top值、透明度、阴影外延宽度、颜色、向里凹陷     inset（选填，默认为外延outset）。*/
+						
+				}
+				.box2:active{
+					box-shadow:0.5px 0.5px 5px 0.01px #0000ff ;/*left值 、top值、透明度、阴影外延宽度、颜色、向里凹陷     inset（选填，默认为外延outset）。*/
+					outline: none;
+					border: 1px solid rgb(0, 0, 255);
+					box-sizing: border-box;/*盒子模型*/
+					cursor: pointer; /*光标移动指针变化成手指*/
+					border-radius: 15px;/*border-radius 边框样式*/
+				}
+				.box1{
+					width: 253.33px;
+					height: 253.33px;
+					position: relative;
+					
+					
+				}
+				.box1-1{
+					width: 253.33px;
+					height: 40px;
+					position: relative;
+					bottom:  10px;
+					
+					
+				}
+				.image{
+					width: 221px;
+					margin-top: 25px;
+				}
+				.-h3{
+					font-weight: 400;
+					font-size: 16px;
+					
+				}
+				.Dark_green_background{
+					width: 100%;
+					height: 724.94px;
+					background-color: #21352c;
+				}
+				.Dark_green_background_1{
+					width: 1050px;
+					height: 524.94px;
+					position: absolute;
+					display: flex;
+					top: 100px;
+					left: 426.5px;
+					    -webkit-box-align: center !important;
+					    -ms-flex-align: center !important;
+					    align-items: center !important;
+					    -ms-flex-item-align: center !important;
+					    align-self: center !important;
+					    vertical-align: middle !important;
+				}
+				.Dark_green_background_1_white{
+					width: 525px;
+					height: 524.94px;
+					background-color: #ffffff;
+					position: relative;
+				}
+				.Dark_green_background_1_image{
+					width: 525px;
+					height: 524.94px;
+					background-color: #ffaaff;
+					position: relative;
+					left: ;
+					
+					
+					background-image: url('https://cipherch.com/wp-content/uploads/2022/07/lizzie-gKk9rpyDryU-unsplash-1200x800-1.jpg');
+			/*		  background-repeat: no-repeat;		*/
+					  background-position: right;
+					  background-size: cover;
+			/*		  background-attachment: fixed;		*/
+			/*		  background-size: cover;
+					  -webkit-background-size: cover;
+					  -moz-background-size: cover;
+					  -o-background-size: cover;	*/
+
+				}
+				.Dark_green_background_1_white_text{
+					text-align: center;
+					position: relative;
+					top: 120px;
+				}
+				.input_style{
+					background-color: rgba(0,0,0,.03);
+					    -webkit-box-shadow: none;
+					    box-shadow: none;
+					    border-color: rgba(0,0,0,.09);
+					    color: currentColor !important;
+					    border-radius: 99px;
+						height: 38.91px;
+						width: 420px;
+						margin: 20px;
+						font-size: 15px;
+				}
+				.input_style_buttom{
+					background-color: #ffff7f;
+					-webkit-box-shadow:none;
+					box-shadow: none;
+					border-color: black;
+					color: #000000;
+					border-radius: 99px;
+					height: 38.91px;
+					width: 100px;
+					font-size: 17px;
+					cursor: pointer;
+				}
+				.white_background_at_the_end{
+					height: 378px;
+					background-color: #ffaaff;
+					top: 571px;
+				}
+				.white_background_at_the_end_1{
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					-ms-flex-wrap: wrap;
+					flex-wrap: wrap;
+					-webkit-box-orient: vertical;
+					-webkit-box-direction: normal;
+					-ms-flex-direction: column;
+					flex-direction: column;
+					width: 100%;
+					height: 57px;
+					font-size: 18px;
+					font-weight: 700;
+				}
+				.white_background_at_the_end_1_1{
+					padding: 0 30px 10px 0;
+					-webkit-box-sizing: border-box;
+					box-sizing: border-box;
+					position: absolute;
+					left: 16em;
+					top: 3.5em;
+					
 				}
     		</style>
     	</head>
     	<body>
 			<div style="height:35px;background-color:#004bb8;position: sticky; top: 0; left: 0;width: 100%;display:block;z-index: 100000000;">   					<!--最顶部的菜单横栏-->
 				<div style="position:relative;left: 51.35%;background-color:#004bb8;height:35px;width: 800px;">
-					<div style="position:relative;top:5px;">
+					<div style="position:relative;top:5px;" class="Populating_the_browser">
 						<a style="font-weight: bold; font-size: 14px; color: #FFFFFF; text-decoration: none;" href="https://cipherch.com/">
 							About CPL
 						</a>
@@ -259,7 +442,9 @@
 				</div>
 				<div style="height: 75px; background-color:#fafafa;width:100%;overflow: hidden;">
 					<div style="left: 15%;position:relative;top:25.025px;">
-						<img style="width:244.px;height:24.95px;" src="https://cipherch.com/wp-content/uploads/2022/05/clp-logo.webp"/>
+						<a href="https://cipherch.com/">
+							<img style="width:244.px;height:24.95px;" src="https://cipherch.com/wp-content/uploads/2022/05/clp-logo.webp"/>
+						</a>
 					</div>
 					<div style="left: 15%;position:relative;left: 29.35%;>
 						<ul style="visibility: visible;">
@@ -279,7 +464,7 @@
 								<a href="https://cipherch.com/" style="text-decoration: none;color: #0033a0; font-weight: 700px;font-size: 14px;">
 									Education and development    
 								</a>
-								<a href="https://cipherch.com/" style="text-decoration: none;color: #0033a0; font-weight: 700px;font-size: 14px;">
+								<a href="https://cipherch.com/wp-admin/post.php?post=101&action=edit&app=uxbuilder&type=editor#!/" style="text-decoration: none;color: #0033a0; font-weight: 700px;font-size: 14px;">
 									Help and support
 								</a>
 							</li>
@@ -460,7 +645,147 @@
 					
 				</div>
 			</div>																																										<!-- 图片部分      -->
-    		<div class="backgrund-color-gray" style="display:block;position:absolute;top:1460px;">														 <!--底部的灰色背景-->
+			<div style="display: block;position: relative;top:690px;">																												<!-- 产品图片点击变色部分      -->
+				<div style="
+							margin-top:10px;
+							margin-left: 10.3%;">
+					<div class="box2">
+						<a href="https://cipherch.com/" class="box1 box1-1" style="text-decoration: none;color: black;">
+							<div class="box1">
+								<img class="image" src="https://cipherch.com/wp-content/uploads/2022/06/4th_of_July_Sale.jpg"/>
+							</div>
+							<div class="box1-1">
+								<h3 class="-h3">Decor & Pillows</h3>
+							</div>
+						</a>
+						
+					</div>
+					<div class="box2">
+						<a href="https://cipherch.com/" class="box1 box1-1" style="text-decoration: none;color: black;">
+							<div class="box1">
+								<img class="image" src="https://cipherch.com/wp-content/uploads/2022/06/default_name.jpg"/>
+							</div>
+							<div class="box1-1">
+								<h3 class="-h3">Appliances</h3>
+							</div>
+						</a>
+						
+					</div>
+					<div class="box2">
+						<a href="https://cipherch.com/" class="box1 box1-1" style="text-decoration: none;color: black;">
+							<div class="box1">
+								<img class="image" src="https://cipherch.com/wp-content/uploads/2022/06/default_name-1.jpg"/>
+							</div>
+							<div class="box1-1">
+								<h3 class="-h3">Rugs</h3>
+							</div>
+						</a>
+						
+					</div>
+					<div class="box2">
+						<a href="https://cipherch.com/" class="box1 box1-1" style="text-decoration: none;color: black;">
+							<div class="box1">
+								<img class="image" src="https://cipherch.com/wp-content/uploads/2022/06/default_name-2.jpg"/>
+							</div>
+							<div class="box1-1">
+								<h3 class="-h3">Organization</h3>
+							</div>
+						</a>
+						
+					</div>
+					<div class="box2">
+						<a href="https://cipherch.com/" class="box1 box1-1" style="text-decoration: none;color: black;">
+							<div class="box1">
+								<img class="image" src="https://cipherch.com/wp-content/uploads/2022/06/default_name-3.jpg"/>
+							</div>
+							<div class="box1-1">
+								<h3 class="-h3">Lighting</h3>
+							</div>
+						</a>
+						
+					</div>
+					<div class="box2">
+						<a href="https://cipherch.com/" class="box1 box1-1" style="text-decoration: none;color: black;">
+							<div class="box1">
+								<img class="image" src="https://cipherch.com/wp-content/uploads/2022/06/default_name-4.jpg"/>
+							</div>
+							<div class="box1-1">
+								<h3 class="-h3">4th of July Sale</h3>
+							</div>
+						</a>
+						
+					</div>
+					
+				</div>
+				   <div style="
+							margin-top:10px;
+							margin-left: 8.3%;">
+					<div class="box2">
+						<a href="https://cipherch.com/" class="box1 box1-1" style="text-decoration: none;color: black;">
+							<div class="box1">
+								<img class="image" src="https://cipherch.com/wp-content/uploads/2022/06/Lighting.jpg"/>
+							</div>
+							<div class="box1-1">
+								<h3 class="-h3">Kitchen</h3>
+							</div>
+						</a>
+						
+					</div>
+					<div class="box2">
+						<a href="https://cipherch.com/" class="box1 box1-1" style="text-decoration: none;color: black;">
+							<div class="box1">
+								<img class="image" src="https://cipherch.com/wp-content/uploads/2022/06/Home_Improvement.jpg"/>
+							</div>
+							<div class="box1-1">
+								<h3 class="-h3">Home Improvement</h3>
+							</div>
+						</a>
+						
+					</div>
+					<div class="box2">
+						<a href="https://cipherch.com/" class="box1 box1-1" style="text-decoration: none;color: black;">
+							<div class="box1">
+								<img class="image" src="https://cipherch.com/wp-content/uploads/2022/06/Appliances.jpg"/>
+							</div>
+							<div class="box1-1">
+								<h3 class="-h3">Outdoor</h3>
+							</div>
+						</a>
+						
+					</div>
+					<div class="box2">
+						<a href="https://cipherch.com/" class="box1 box1-1" style="text-decoration: none;color: black;">
+							<div class="box1">
+								<img class="image" src="https://cipherch.com/wp-content/uploads/2022/06/Kitchen.jpg"/>
+							</div>
+							<div class="box1-1">
+								<h3 class="-h3">Baby & Kids</h3>
+							</div>
+						</a>
+						
+					</div>
+					<div class="box2">
+						<a href="https://cipherch.com/" class="box1 box1-1" style="text-decoration: none;color: black;">
+							<div class="box1">
+								<img class="image" src="https://cipherch.com/wp-content/uploads/2022/06/Baby__26_Kids.jpg"/>
+							</div>
+							<div class="box1-1">
+								<h3 class="-h3">Bedding & Bath</h3>
+							</div>
+						</a>
+					</div>
+					<div class="box2">
+						<a href="https://cipherch.com/" class="box1 box1-1" style="text-decoration: none;color: black;">
+							<div class="box1">
+								<img class="image" src="https://cipherch.com/wp-content/uploads/2022/06/Organization.jpg"/>
+							</div>
+							<div class="box1-1">
+								<h3 class="-h3">Organization</h3>
+							</div>
+						</a>
+					</div>
+			</div>																																										<!-- 产品图片点击变色部分      -->
+    		<div class="backgrund-color-gray" style="display:block;position:absolute;top:670px;">														 <!--底部的灰色背景-->
     			<div class="diyihang"><!--第一行文字，中间有俩文字1120 25px-->
     				<span href="" class="eco-feed">Eco Feed</span>
     				<span href="" class="view-all">View All</span>
@@ -568,6 +893,92 @@
     				</div>											<!--第一个部分到此结束一个循环                     444444444-->
     			</div>
     		</div>																																		 <!--底部的灰色背景-->
+			<div style="display: block;position:relative;top:571px;">																																		<!--底部的墨绿色背景加上订阅按钮-->
+				<div class="Dark_green_background">              <!-- 墨绿色背景 width 100% height 724.94px -->
+					<div class="Dark_green_background_1">			<!-- 中间部分小方形半是白色的一半是图片  白色部分有一个订阅按钮   总1050 524.94  图片是525 524.94-->
+						<div class="Dark_green_background_1_white">
+							<div class="Dark_green_background_1_white_text">
+								<h3 style="font-size: 1.75rem;line-height: 80px;color: #555555;">Sign up today</h3>
+								<p style="display: block;width: 420px;margin-inline-start: 0px;margin-inline-end: 0px;margin-left:50px;">Lorem ipsum dolor sit amet adipiscing elit diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+								<input type="email" name="your-email" value="" size="40" class="input_style" aria-required="true" aria-invalid="false" placeholder="Your Email (required)"><br />
+								<input type="button" class="input_style_buttom" name="buttom" value="SIGN UP" id="onclick_buttom" onclick="firstfunction()">
+							</div>
+						</div>
+						<div class="Dark_green_background_1_image">
+			<!--			<img src="https://cipherch.com/wp-content/uploads/2022/07/lizzie-gKk9rpyDryU-unsplash-1200x800-1.jpg" alt="">			  -->	
+						</div>
+					</div>
+				</div>
+			</div>																																		<!--底部的墨绿色背景加上订阅按钮-->
+			<div class="Populating_the_browser white_background_at_the_end">			<!-- 用自适应浏览器的css margin:auto 来使得最后的页尾是根据浏览器的大小自适应屏幕的 -->			<!--页尾白色的背景部分-->
+				<div >
+					<div class="Populating_the_browser white_background_at_the_end_1">
+						<div class="white_background_at_the_end_1_1">
+							<a href="" style="margin-bottom: 20px;display: block;color: #0033a0;">About CLP Power</a>
+							<ul style="list-style: none; padding-left: 0;"></ul>
+						</div>
+					</div>
+					<div class="Populating_the_browser white_background_at_the_end_1">
+						<div class="white_background_at_the_end_1_1">
+							<a href="" style="margin-bottom: 20px;display: block;color: #0033a0;">Careers</a>
+							<ul style="list-style: none; padding-left: 0;"></ul>
+						</div>
+					</div>
+					<div class="Populating_the_browser white_background_at_the_end_1">
+						<div class="white_background_at_the_end_1_1">
+							<a href="" style="margin-bottom: 20px;display: block;color: #0033a0;">Media Resources</a>
+							<ul style="list-style: none; padding-left: 0;"></ul>
+						</div>
+					</div>
+					<div class="Populating_the_browser white_background_at_the_end_1">
+						<div class="white_background_at_the_end_1_1">
+							<a href="" style="margin-bottom: 20px;display: block;color: #0033a0;">Procurement</a>
+							<ul style="list-style: none; padding-left: 0;"></ul>
+						</div>
+					</div>
+				</div>
+				<div style="position: relative;;top:-14.25em;right: -5em;">
+					<div class="Populating_the_browser white_background_at_the_end_1">
+						<div class="white_background_at_the_end_1_1">
+							<a href="" style="margin-bottom: 20px;display: block;color: #0033a0;">About CLP Power</a>
+							<ul style="list-style: none; padding-left: 0;"></ul>
+						</div>
+					</div>
+					<div class="Populating_the_browser white_background_at_the_end_1">
+						<div class="white_background_at_the_end_1_1">
+							<a href="" style="margin-bottom: 20px;display: block;color: #0033a0;">Careers</a>
+							<ul style="list-style: none; padding-left: 0;"></ul>
+						</div>
+					</div>
+					<div class="Populating_the_browser white_background_at_the_end_1">
+						<div class="white_background_at_the_end_1_1">
+							<a href="" style="margin-bottom: 20px;display: block;color: #0033a0;">Media Resources</a>
+							<ul style="list-style: none; padding-left: 0;"></ul>
+						</div>
+					</div>
+					<div class="Populating_the_browser white_background_at_the_end_1">
+						<div class="white_background_at_the_end_1_1">
+							<a href="" style="margin-bottom: 20px;display: block;color: #0033a0;">Procurement</a>
+							<ul style="list-style: none; padding-left: 0;"></ul>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				
+				
+			</div>																																		<!--页尾白色的背景部分-->
+			<div>
+				
+			</div>
+			<iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+			<p><a href="https://www.runoob.com" target="iframe_a" rel="noopener">RUNOOB.COM</a></p>
+			<script>
+				function firstfunction(){
+				alert("Please enter your email address");
+				}
+			</script>
 		
     </body>
 
